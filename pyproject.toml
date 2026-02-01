@@ -1,0 +1,16 @@
+[project]
+name = "wechat-bill-analyzer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.0",
+    "pdfplumber>=0.11.9",
+    "pyecharts>=2.0.9",
+    "pyzipper>=0.3.6",
+    "snapshot-selenium>=0.0.2",
+    "tqdm>=4.67.2",
+    "xlsxwriter>=3.2.9",
+]
