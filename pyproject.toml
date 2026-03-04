@@ -14,3 +14,9 @@ dependencies = [
     "tqdm>=4.67.2",
     "xlsxwriter>=3.2.9",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+]
