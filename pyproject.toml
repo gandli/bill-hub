@@ -1,7 +1,7 @@
 [project]
 name = "wechat-bill-analyzer"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.2.0"
+description = "微信支付账单批处理解析器，支持 ZIP 压缩包和独立 PDF 文件的批量处理，生成 Excel 和可视化报告"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -10,7 +10,24 @@ dependencies = [
     "pdfplumber>=0.11.9",
     "pyecharts>=2.0.9",
     "pyzipper>=0.3.6",
-    "snapshot-selenium>=0.0.2",
     "tqdm>=4.67.2",
     "xlsxwriter>=3.2.9",
+    "selenium>=4.15.0",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py", "tests.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
