@@ -2,6 +2,8 @@
 
 A web-based bill management and data analysis tool supporting multi-platform bill import, AI-powered data extraction, cross-year summary reports, batch processing, and visual analytics.
 
+See [PRD.md](PRD.md) for detailed requirements.
+
 ## ✨ Features
 
 - 📦 **Batch Processing**: Process multiple ZIP archives and PDF files at once
@@ -48,38 +50,25 @@ python main.py
    - HTML reports (`.html`)
    - Full-page PNG screenshots (optional)
 
-### File Structure
-
-```
-bill-hub/
-├── input/          # Place your ZIP/PDF files here
-├── output/         # Generated reports will appear here
-├── main.py         # Main entry point
-├── utils.py        # Utility functions (ZIP, PDF parsing)
-├── visualize.py    # Visualization and report generation
-├── logger_config.py # Logging configuration
-└── tests.py        # Unit tests
-```
-
 ## 🧪 Testing
 
-Run the test suite:
+This project includes a comprehensive test suite:
 
 ```bash
-python tests.py
-```
+# Install development dependencies
+pip install -e ".[dev]"
 
-Or using pytest:
-
-```bash
+# Run all tests
 pytest
-```
 
-Run tests with coverage:
-
-```bash
+# Run tests with coverage
 pytest --cov=.
+
+# Run specific test file
+pytest tests/test_utils.py
 ```
+
+See [tests/README.md](tests/README.md) for more details.
 
 ## 📊 Output Examples
 
@@ -120,7 +109,7 @@ The tool automatically validates transaction data and checks for:
 ### Adding New Features
 
 1. Add type hints to new functions
-2. Include unit tests in `tests.py`
+2. Include unit tests in `tests/` directory
 3. Update this README with new features
 4. Ensure logging is used for debugging information
 
@@ -137,7 +126,3 @@ Contributions are welcome! Please:
 ## 📄 License
 
 [Add your license here]
-
-## 🔗 See Also
-
-See [PRD.md](PRD.md) for detailed requirements and future features.
