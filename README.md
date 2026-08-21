@@ -125,4 +125,4 @@ Contributions are welcome! Please:
 
 ## 📄 License
 
-[Add your license here]
+No license has been added to this repository yet. All rights reserved by the author until a LICENSE file is published. See [PRD.md](PRD.md) for project background.
